@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: my-mongo-container
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - '27017:27017'
+
+  app:
+    build: .
+    container_name: my-app-container
+    volumes:
+      - .:/app
+    ports:
+      - '8000:8000'
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:
