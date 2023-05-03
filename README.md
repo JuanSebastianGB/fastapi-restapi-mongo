@@ -75,20 +75,6 @@ The project is organized as follows:
 
 markdownCopy code
 
-`.
-├── app
-│   ├── __init__.py
-│   ├── database.py
-│   ├── models.py
-│   ├── routes
-│   │   ├── __init__.py
-│   │   └── user.py
-│   └── services
-│       ├── __init__.py
-│       └── user.py
-├── main.py
-└── requirements.txt`
-
 - The `app` directory contains the main application code.
 - The `database.py` file contains the database connection code.
 - The `models.py` file contains the Pydantic models for the user data.
